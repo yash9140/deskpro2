@@ -20,5 +20,9 @@ app.use('/api/dashboard', require('./routes/dashboard'));
 app.use('/api/profile', require('./routes/profile'));
 app.use('/api/tickets', require('./routes/tickets'));
 
+app.get('/test', (req, res) => {
+  res.json({ msg: 'CORS works!' });
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
